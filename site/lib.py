@@ -150,7 +150,9 @@ def gallery(items, group, even=False, cols=None):
     """items: [(key, alt, caption)] – öffnet die Lightbox."""
     a = ''
     for key, alt, cap in items:
-        a += (f'<a class="lb" href="{full(key, 1600)}" data-group="{group}" data-alt="{esc(alt)}" data-caption="{esc(cap)}">'
+        nat = _info(key)[1]
+        nat = f' data-native="{nat}"' if nat < 1100 else ''   # kleine Originale in der Lightbox nicht über ~1,35x aufziehen
+        a += (f'<a class="lb" href="{full(key, 1600)}"{nat} data-group="{group}" data-alt="{esc(alt)}" data-caption="{esc(cap)}">'
               f'{img(key, alt, "(max-width:700px) 50vw, 25vw", widths=[360, 640, 960])}</a>')
     return f'<div class="gallery{" gallery--even" if even else ""}{" gallery--3" if cols == 3 else ""}">{a}</div>'
 

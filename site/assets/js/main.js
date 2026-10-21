@@ -89,6 +89,8 @@
       var a = group[idx];
       im.src = a.getAttribute('href');
       im.alt = a.getAttribute('data-alt') || '';
+      var nat = parseInt(a.getAttribute('data-native') || '0', 10);
+      im.style.maxWidth = nat ? Math.round(nat * 1.35) + 'px' : '';   // kleine Originale nicht größer als nötig zeigen
       cap.textContent = a.getAttribute('data-caption') || '';
       var multi = group.length > 1;
       $('.lb-prev', dlg).style.display = $('.lb-next', dlg).style.display = multi ? '' : 'none';
