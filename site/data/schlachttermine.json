@@ -1,0 +1,6 @@
+{
+  "saison": "2025/26",
+  "hinweis": "Hier neue Schlachttermine als ISO-Datum (JJJJ-MM-TT) ergänzen. Die Seite zeigt automatisch den nächsten Termin mit Countdown.",
+  "termine": ["2025-10-25", "2025-11-22", "2026-01-24", "2026-02-21", "2026-03-21"],
+  "vorbestellung": "Vorbestellungen jeweils bis zwei Tage vorher telefonisch oder per Whatsapp unter: 0151 55 32 20 32"
+}
